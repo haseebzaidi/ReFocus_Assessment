@@ -11,8 +11,8 @@ A robust, professional-grade E2E automation framework built with Playwright and 
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/haseebzaidi/ReFocus_Assessment-.git
-   cd ReFocus_Assessment-
+   git clone https://github.com/haseebzaidi/ReFocus_Assessment.git
+   cd ReFocus_Assessment
    ```
 2. Install dependencies:
    ```bash
