@@ -20,9 +20,16 @@ export class PurchaseWorkflow {
   }
 
   async performLogin() {
+    const url = process.env.BASE_URL || 'https://www.saucedemo.com/';
     await test.step('Workflow: Login', async () => {
-      await this.loginPage.navigate(process.env.BASE_URL!);
-      await this.loginPage.login(process.env.USER_NAME!, process.env.PASSWORD!);
+      if (!url || url === 'undefined') {
+        throw new Error('BASE_URL environment variable is not defined!');
+      }
+      await this.loginPage.navigate(url);
+      await this.loginPage.login(
+        process.env.USER_NAME || 'standard_user', 
+        process.env.PASSWORD || 'secret_sauce'
+      );
     });
   }
 
