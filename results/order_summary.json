@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "name": "Sauce Labs Backpack",
+      "price": "$29.99"
+    },
+    {
+      "name": "Test.allTheThings() T-Shirt (Red)",
+      "price": "$15.99"
+    }
+  ],
+  "subtotal": "45.98",
+  "tax": "3.68",
+  "total": "49.66",
+  "confirmationMessage": "Thank you for your order!"
+}
