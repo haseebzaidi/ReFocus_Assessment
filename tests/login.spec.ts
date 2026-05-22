@@ -6,11 +6,14 @@ test.describe('Login Tests', () => {
 
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
-    await loginPage.navigate(process.env.BASE_URL!);
+    const url = process.env.BASE_URL || 'https://www.saucedemo.com/';
+    await loginPage.navigate(url);
   });
 
   test('Successful login with valid credentials', async ({ page }) => {
-    await loginPage.login(process.env.USER_NAME!, process.env.PASSWORD!);
+    const username = process.env.USER_NAME || 'standard_user';
+    const password = process.env.PASSWORD || 'secret_sauce';
+    await loginPage.login(username, password);
     
     // Verify login success by checking if the products header is visible
     const productsHeader = page.locator('.title');
